@@ -1,0 +1,254 @@
+
+/*set body font and background color*/
+body {
+  font-family:Arial;
+  font-size: 17px;
+  color: #444444;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+/*set h1 font styles*/
+h1 {
+  font-family:Arial;
+  font-weight: bold;
+  font-size: 40px;
+  color: #1b447f;
+}
+/*set h2 font styles*/
+h2 {
+  font-family:Arial;
+  font-weight: bold;
+  font-size: 24px;
+  color: #1b447f;
+}
+/*set h3 font styles*/
+h3 {
+  font-family:Arial;
+  font-weight: bold;
+  font-size: 17px;
+  color: #1b447f;
+}
+/*quotes style*/
+.quote {
+  font-size: 30px;
+  font-family: Arial;
+  color: #03a3df;
+}
+
+.quote-speaker {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #03a3df;
+}
+
+/*--------------------------
+Navigation (boxed style)
+----------------------------*/
+nav a {
+  border: 2px solid #03a3df;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #1b447f;
+  font-weight: bold;
+  background: #03a3df;
+}
+
+nav a:hover {
+  background: #ecb722;
+  color: white;
+}
+
+nav ul {
+  list-style: none; /* removes bullets */
+  padding: 0;
+  margin-right: 1rem;
+  display: flex; /* puts links next to each other */
+  justify-content: flex-end; /* aligns them to the right */
+}
+nav li {
+  margin: 0;
+}
+
+.sub-nav {
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+
+.sub-nav ul {
+  justify-content: center; /* moves links to the center */
+}
+
+.sub-nav a {
+  background: white; 
+  color: #1b447f;
+}
+
+/*footer image behaves like a background - do not put in html*/
+footer {
+  background-image: url("../images/footerImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*Base grid layout to use for every page*/
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* create one column that stretches across the full width (1 fraction of available space)*/
+  grid-template-rows: auto 1fr auto;/* Header Main Footer--create 3 rows, height adjusts to fit the header, 1fr = Main content expands to fill leftover space, Footer fits its content*/
+  min-height: 100vh;/*this ensures grid is at least the full height of the browser winder.*/
+}
+header {
+  grid-row: 1;
+}
+main {
+  grid-row: 2;
+  padding: 2rem;
+}
+footer {
+  grid-row: 3;
+  padding: 0.5rem 1rem;
+}
+/* Home page grid*/
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Make Intro section full width */
+.intro {
+  grid-column: 1 / span 3;
+}
+
+/* box styling */
+.box {
+  border: 2px solid #444444;
+  padding: 1.5rem;
+  background: #ffffff;
+}
+
+/* View All Classes button */
+.view-all {
+  grid-column: block;
+  text-align: center;
+  background: #03a3df;
+  color: white;
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+}
+.view-all:hover {
+  background: #1b447f;
+}
+/*------------------------
+Footer style
+--------------------------*/
+.footer-box {
+  padding: 1rem;
+  border-radius: 6px;
+  max-width: 1000px;
+  margin: 0 auto; /* centers the box */
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*3 equal columns*/
+  gap: 1rem;
+}
+/* Each section becomes its own box */
+.footer-card {
+  border: 2px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; /* equal height inside grid */
+  box-sizing: border-box;
+  color: #ecb722; 
+}
+
+.footer-card h3 {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ecb722; 
+  margin-bottom: 0.5rem;
+}
+
+.footer-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-card ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #ecb722;
+}
+
+/*------------------------------
+Group Class and About box style
+-------------------------------*/
+.class-card {
+  border: 2px solid #444444;
+  padding: 1.5rem;
+  border-radius: 6px;
+  background: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.class-card h3 {
+  font-size: 17px;
+  font-weight: bold;
+  color: #1b447f;
+  margin-top: 0;
+}
+
+.class-card p {
+  margin-bottom: 0.8rem;
+}
+/*------------------------------
+Private Class and Instructor box style
+-------------------------------*/
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*3 equal columns*/
+  gap: 1rem;
+}
+/* Each section becomes its own box */
+.vertical-card {
+  border: 2px solid #444444;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;
+  box-sizing: border-box;
+}
+.vertical-card h3 {
+  text-align: center;
+}
+.vertical-card img {
+  display: block;
+  margin: 0 auto;
+}
+/*-----------------------------
+video style
+------------------------------*/
+.video {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  text-align: center;      
+  margin: 2rem 0;        
+}
