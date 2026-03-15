@@ -199,6 +199,7 @@ Footer style
 /*------------------------------
 Group Class and About box style
 -------------------------------*/
+
 .class-card {
   border: 2px solid #444444;
   padding: 1.5rem;
@@ -242,6 +243,7 @@ Private Class and Instructor box style
   display: block;
   margin: 0 auto;
 }
+
 /*-----------------------------
 video style
 ------------------------------*/
@@ -252,3 +254,35 @@ video style
   text-align: center;      
   margin: 2rem 0;        
 }
+/*--------------------------------------------------------
+Using Flexbox for mobile but still Keep the same structure for desktop
+---------------------------------------------------------*/
+@media (max-width: 980px) {
+  #group-classes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  /* Adjust Each class card */
+  .class-card {
+    width: 85%;
+  }
+  /*Adjust private lessons & instructor section */
+  #private-lesson {
+    text-align: center;
+  }
+  .main-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  /* Adjust Each vertical class card */
+  .vertical-card {
+    width: 85%;
+  }
+}
+
