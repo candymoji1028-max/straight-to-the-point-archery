@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Straight to the Point Archery</title>
-    <!--CSS stylesheet-->
-    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
-  </head>
 
-  <body class="page-grid">
+<head>
+  <meta charset="UTF-8">
+  <title>Straight to the Point Archery</title>
+  <!--CSS stylesheet-->
+  <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+</head>
+
+<body tabindex="-1">
+  <!--Skip link outside the grid-->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!--Grid container starts after skip link-->
+  <div id="top" class="page-grid">
     <header>
       <div>
-      <figure>
-      <img src="images/archeryAcademy-logo-color.png" alt="archeryAcademy logo image">
-      </figure>
+        <figure>
+          <img src="images/archeryAcademy-logo-color.png" alt="Archery Academy logo" tabindex="-1">
+        </figure>
       </div>
       <nav>
         <ul>
@@ -23,29 +28,36 @@
       </nav>
     </header>
 
-    <main class="home-grid">
+    <main id="main-content" class="home-grid">
 
       <section class="intro box"> <!--introduction-->
         <h1>Welcome to Straight to the Point Archery</h1>
-        <p>Straight to the Point Archery offers classes for all skill levels, from beginners to advanced students. Our certified instructors help students build confidence, technique, and safety skills in a supportive environment.</p>
+        <p>Straight to the Point Archery offers classes for all skill levels, from beginners to advanced students. Our
+          certified instructors help students build confidence, technique, and safety skills in a supportive
+          environment.</p>
 
-        <p>We have excellent network of contacts with the USA Archery (USAA), Washington State Archery Association (WSAA), Washington State Bow Hunters (WSB), National Field Archery Association (NFAA) and many more national and state archery associations. These partnerships allow you to feel confident in our facility and staff.</p>
+        <p>We have excellent network of contacts with the USA Archery (USAA), Washington State Archery Association
+          (WSAA), Washington State Bow Hunters (WSB), National Field Archery Association (NFAA) and many more national
+          and state archery associations. These partnerships allow you to feel confident in our facility and staff.</p>
       </section>
 
       <div class="intro box"> <!--classes level offering-->
         <article>
           <h2>Beginner Classes</h2>
-          <p>Perfect for newcomers of all ages. Students learn safety, basic form, and foundational shooting skills in a supportive environment.</p>
+          <p>Perfect for newcomers of all ages. Students learn safety, basic form, and foundational shooting skills in a
+            supportive environment.</p>
         </article>
 
         <article>
           <h2>Intermediate Classes</h2>
-          <p>For students who understand the basics and want to improve accuracy, consistency, and technique through guided practice.</p>
+          <p>For students who understand the basics and want to improve accuracy, consistency, and technique through
+            guided practice.</p>
         </article>
 
         <article>
           <h2>Advanced Classes</h2>
-          <p>Designed for experienced archers looking to refine precision, build strength, and train with more advanced drills.</p>
+          <p>Designed for experienced archers looking to refine precision, build strength, and train with more advanced
+            drills.</p>
         </article>
       </div>
 
@@ -53,37 +65,41 @@
         <a href="classes.html" class="view-all box">View All Classes</a>
       </div>
     </main>
-
+    <div class="back-to-top-container">
+      <a href="#top" class="back-to-top">Back to top</a>
+    </div>
     <footer id="contact">
       <div class="footer-box">
         <div class="footer-grid">
-         <section class="footer-card">
-          <h3>Contact Us: </h3> 
-          <p>528 Nock Point Ln <br> Tacoma, WA 98412 </p>
-          <p>(253) 555-1010 </p> 
-          <p>archery-education@example.com </p>
-         </section>
-      
-         <section class="footer-card">
-          <h3>Services: </h3>
-          <ul>
-           <li>Group Classes (A101-A103)</li>
-           <li>Private Lessons</li>
-           <li>Birthday Parties</li>
-           <li>Corporate Events</li>
-           <li>Youth Programs</li>
-          </ul>
-         </section>
+          <section class="footer-card">
+            <h3>Contact Us: </h3>
+            <p>528 Nock Point Ln <br> Tacoma, WA 98412 </p>
+            <p>(253) 555-1010 </p>
+            <p>archery-education@example.com </p>
+          </section>
 
-         <section class="footer-card">
-          <h3>Hours:</h3>
-          <p>Monday - Thursday:</p>
-          <p>4:00 PM - 6:00 PM</p>
-          <p>Additional times available for private lessons</p>
-         </section>
+          <section class="footer-card">
+            <h3>Services: </h3>
+            <ul>
+              <li>Group Classes (A101-A103)</li>
+              <li>Private Lessons</li>
+              <li>Birthday Parties</li>
+              <li>Corporate Events</li>
+              <li>Youth Programs</li>
+            </ul>
+          </section>
+
+          <section class="footer-card">
+            <h3>Hours:</h3>
+            <p>Monday - Thursday:</p>
+            <p>4:00 PM - 6:00 PM</p>
+            <p>Additional times available for private lessons</p>
+          </section>
         </div>
       </div>
-    <p class="footer-bottom">&copy; 2026 Straight to the Point Archery</p>
+      <p class="footer-bottom">&copy; 2026 Straight to the Point Archery</p>
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -77,14 +77,22 @@ nav li {
   margin-top: 3rem;
   margin-left: 2rem;
 }
-
+/* make sub-nav ul becomes a felx container and all the li items become flex items*/
 .sub-nav ul {
+  display: flex;
   justify-content: center; /* moves links to the center */
+  flex-wrap: wrap; /*move the button to the next line when it get too big*/
 }
 
 .sub-nav a {
+  padding: 0.4rem 0.6rem;
+  margin: 0.3rem;
   background: white; 
   color: #1b447f;
+  white-space: normal; /* prevent buttons from smashing into the others*/
+  max-width: 100%; /*ensure the button never grow wider than the screen*/
+  display: inline-block;
+
 }
 
 /*footer image behaves like a background - do not put in html*/
@@ -100,9 +108,14 @@ footer {
   grid-template-columns: 1fr; /* create one column that stretches across the full width (1 fraction of available space)*/
   grid-template-rows: auto 1fr auto;/* Header Main Footer--create 3 rows, height adjusts to fit the header, 1fr = Main content expands to fill leftover space, Footer fits its content*/
   min-height: 100vh;/*this ensures grid is at least the full height of the browser winder.*/
+  outline: none;
+}
+.page-grid:focus {
+  outline: none;
 }
 header {
   grid-row: 1;
+  padding-top: 1rem;
 }
 main {
   grid-row: 2;
@@ -285,4 +298,48 @@ Using Flexbox for mobile but still Keep the same structure for desktop
     width: 85%;
   }
 }
+/*-----------------------------------------------
+Accessibility features
+-----------------------------------------------*/
+/* skip to main content*/
+.skip-link {
+  position: absolute;
+  top:-40px;
+  left: 0;
+  background: #ecb722;
+  color: #1b447f;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  z-index: 9999; /*ensure it appears on top of everything when focused */
+}
+.skip-link:focus {/* force to appear above the header */
+  position: absolute;
+  top: 0; 
+}
+/*back to top*/
+.back-to-top-container {
+  text-align: center;
+  margin: 2rem 0; 
+}
+.back-to-top {
+  display: inline-block;
+  margin-top: 2rem;
+  background: #03a3df;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back-to-top:hover,
+.back-to-top:focus {
+  background: #1b447f;
+  outline: 3px solid #ecb722;
+  outline-offset: 3px;
+}
 
+figure {
+  outline: none;
+}
+figure:focus {
+  outline: none;
+}
